@@ -1,0 +1,172 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Oxygen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Other CSS files */
+@import url('./reset.css');
+
+
+:root {
+  --bg: #fef5ef;
+  --fg: #1f1e19;
+  --link-fg: #34344a;
+}
+
+
+/********** TAGS **********/
+html {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+body {
+  margin: 3vh 15vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  font-family: 'Chonburi', cursive;
+}
+
+a {
+  color: var(--link-fg);
+}
+
+ul,
+dl {
+  margin-top: 10px;
+}
+
+dt {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+dd {
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 50px;
+}
+/***************************/
+
+
+
+/******** CLASSES **********/
+.homepage__recipe-list {
+  display: grid;
+
+  /* The columns will automatically break when each one gets below 300px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+}
+
+.homepage__recipe-card {
+  text-align: center;
+  padding: 10px 10px 5px 10px;
+  border: 2px solid var(--fg);
+}
+
+.homepage__recipe-card:hover {
+  margin-top: -5px;
+  box-shadow: 6px 6px 0px 0px var(--fg);
+}
+
+.recipe-card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.recipe-card__title:hover {
+  text-decoration: underline;
+}
+
+.recipe-card__image {
+  width: 100%;
+  margin-bottom: 5px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.btn__return-home {
+  margin-bottom: 20px;
+}
+
+.btn__return-home a {
+  border: 2px solid var(--fg);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.btn__return-home a:hover {
+  margin-top: -5px;
+  box-shadow: 3px 3px 0px 0px var(--fg);
+}
+
+.recipe-name {
+  margin-bottom: -10px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recipe-img {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
+  height: 400px;
+  object-fit: cover;
+  border: 2px solid var(--fg);
+}
+
+.recipe-desc {
+  text-align: justify;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-top: 50px;
+  font-size: small;
+  border-top: 2px solid var(--fg);
+}
+/***************************/
+
+
+
+/*********** IDs ***********/
+#homepage__header {
+  margin-bottom: 1rem;
+}
+#homepage__title {
+  text-align: center;
+  font-size: 8vw;
+}
+/***************************/
+
+
+
+/******* MEDIA QUERY *******/
+@media (max-width: 700px) {
+  body {
+    margin: 3vh 5vw;
+  }
+}
+/***************************/
